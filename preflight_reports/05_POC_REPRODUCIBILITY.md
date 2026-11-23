@@ -1,0 +1,11 @@
+# Preliminary PoC reproducibility
+
+The Windows replay used PowerShell 7.6.9, CPython 3.12.14, and pinned project dependencies. The historical runner staged fresh work directories, verified file hashes, and executed with one numerical-library thread per process. The archived source packets and prior run outputs were kept intact.
+
+- **Stage 18 passed.** The core regressions and Stages 18.2–18.6 passed their expected-metric checks. Fresh Guan61 summaries and the rebuilt 5,000-replicate node bootstrap matched decoded numeric values within 1e−12. Some byte representations differed across environments. The Windows repaired-QUID Stage 18 rerun also passed its expected metrics and regenerated the bootstrap.
+- **Stage 20 passed for the recovered point contrasts.** All 33 dataset/scenario/policy groups matched the four archived cells. The Stage 20 packet does not provide a separately runnable original interval-summary build.
+- **Stage 22 passed.** The runner used the rebuilt Stage 18 sensitivity inputs plus verified frozen intermediates. All nine compared tables were byte-identical.
+- **Stage 24 passed on Windows after porting the bundle runner.** The status receipt reports METRIC COMPARISON PASS. The exact-subset, targeted-bootstrap, and secondary-saturation summaries were byte-identical. The independent audit checked 83,280 target rows with zero budget, containment, or direction violations. The original Windows attempt reached midpoint correction and stopped at the unsupported `fork` context. The verified fresh-run copy uses Windows `spawn`.
+- **Stage 26 bounded smoke passed.** A repeat produced 28 identical trajectories with zero violations. Reproduction of the full held-out study is blocked by a truncated first-pass log and absent second-pass outputs. [Acquisition audit](06_SEQUENTIAL_ACQUISITION_AUDIT.md)
+
+The separate rounding-repaired Stage 18 and 24 runs preserved every compared result. The repaired Stage 24 run repeated the independent audit of 83,280 rows and matched all three checked summaries byte for byte. The verified historical replay combines raw and frozen derived inputs. A raw-only rebuild of every predecessor is still open. [Reproducibility manifest](reproducibility_manifest.json) · [Execution commands](execution_commands.md)

@@ -1,0 +1,16 @@
+Audit date: 2026-11-24 (Asia/Colombo)
+Windows: Windows 11 Pro 25H2, build 26200.9457 (NT 10.0.26200)
+PowerShell: 7.6.9 Core (Windows)
+CPU: AMD Ryzen 7 7435HS, 16 logical processors
+Workspace: D:\Final Year Project
+Interpreter: D:\Final Year Project\.venv\Scripts\python.exe
+Python: native Windows CPython 3.12.14 x64, base already bundled with Codex
+Environment: D:\Final Year Project\.venv, system site packages disabled
+pip: 25.0.1 inside .venv. pip check reported no broken requirements.
+Git: 2.56.0.windows.4
+GitHub CLI: unavailable. Existing Git HTTPS credential support and an authenticated browser were available.
+Native py launcher: unavailable. The PATH Python alias did not launch. The existing bundled Windows executable supported the requested venv.
+Node and npm: present. No frontend dependency or build in the source tree.
+All project package installs targeted .venv. Project-local pip cache and temporary paths were used.
+Global package installs: none. System package installs: none. Administrator or sudo use: none.
+Native Windows test and experiment execution. PowerShell UNC reads were used to preserve and migrate local source evidence.

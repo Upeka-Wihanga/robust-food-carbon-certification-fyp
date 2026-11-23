@@ -1,126 +1,43 @@
 # Robust Food-Carbon Certification under Incomplete Ingredient Disclosure
 
-**Information Sufficiency and Observation-Aware Sequential Acquisition**
+Information Sufficiency and Observation-Aware Sequential Acquisition · FYP 2026/27
 
-> This repository is currently being initialized from the validated research PoCs and frozen experimental evidence. The original exploratory research artifacts are preserved separately from the reconstructed software baseline. Observation-aware sequential acquisition and the final application are under active development.
+The engine compares modeled upstream ingredient-production GHG per unit of ingredient mass. It certifies a direction only when it can establish a strict sign across the declared ordered compositions and shared commodity-factor intervals. Otherwise it abstains. Processing, cooking, packaging, transport, retail, waste and supplier-specific emissions are outside this model.
 
-## Research problem
+## What runs today
 
-Food ingredient lists disclose order but often omit exact shares. This research
-asks when the available information is nevertheless sufficient to guarantee
-the direction of a pairwise modeled greenhouse-gas comparison, and what
-additional share or factor information is most valuable when it is not.
+- The active Python library covers complete ordered geometry with one disclosed rank per food, disconnected rounding preimages, shared factors, and strict-sign classification.
+- The recovered historical runners reproduce the Stage 18, 20, 22, and 24 pilot evidence from the supplied raw and frozen derived inputs.
+- Stage 26 code includes Guan61/M2 construction, rounded starting states, observation-driven share and factor updates, all seven policy/ceiling arms, and a deterministic empirical smoke test. Completion of the full held-out study, multi-rank disclosures, and the API/web workflow are tracked in the [readiness report](preflight_reports/10_FINAL_READINESS_REPORT.md).
 
-The method has three possible outcomes: certify food A as lower, certify food B
-as lower, or abstain. Abstention is required whenever the modeled difference
-can change sign over the complete declared uncertainty set.
+## Windows setup
 
-## Environmental scope
+Use an existing native Windows CPython 3.12, PowerShell 7, and Git. The workspace used for this audit is `D:\Final Year Project`. For a fresh copy, use a writable local folder. Supply `-BasePython 'C:\path\to\python.exe'` if the launcher or Python alias does not point to a working 3.12 interpreter. This workstation used the Python already bundled with Codex. Installation and pip's cache stay inside the project.
 
-The current model covers normalized ingredient mass and upstream
-ingredient-production greenhouse-gas factors. It is not a whole-product life
-cycle assessment and does not currently model processing, packaging,
-distribution, retail, cooking, supplier-specific sourcing, or every legal form
-of commercial QUID disclosure.
-
-## Current status
-
-This milestone establishes an auditable repository and preserves the supplied
-evidence. It does **not** reconstruct or implement the mathematical oracle.
-
-Ten research PoCs are historically reported: robust certification, the
-four-corner regression, the corrected disclosure inverse, Guan validation,
-FCID/dataFIELD processing, selectable disclosure policies, dependence-aware
-evaluation, matched uncertainty attribution, the information frontier, and
-targeted information acquisition. Their current evidence and migration status
-are recorded in [docs/poc-results.md](docs/poc-results.md).
-
-The original historical Python implementation and several derived CSVs are
-not available. Any later recreation from the frozen protocols will be labelled
-`reconstructed_baseline` until validated against recoverable metrics and
-regression cases.
-
-## Repository architecture
-
-- `research_archive/`: immutable historical evidence and provenance records;
-- `src/food_carbon_cert/`: future research library, separated by geometry,
-  certification, disclosure, uncertainty, acquisition, evaluation, and data;
-- `experiments/`: deterministic command-line experiment orchestration;
-- `tests/`: unit, permanent regression, and property/metamorphic tests;
-- `configs/`: versioned dataset, uncertainty, policy, and experiment settings;
-- `data/`: manifests and local placement for uncommitted raw sources;
-- `results/`: deliberately frozen historical results and ignored current runs;
-- `docs/`: supervisor-facing scope, methods, provenance, status, and roadmap.
-
-See [docs/architecture.md](docs/architecture.md) for the provenance boundary
-between historical evidence and future code.
-
-## Archived evidence
-
-The repository preserves supplied Stage-18 and Stage-24 documents, progress
-tracking, four independent review files, handoff metadata, and the original
-provenance manifest. All 14 handoff files passed SHA-256 and byte-length
-verification. Raw datasets are not duplicated into the archive or committed.
-
-## Datasets
-
-Three raw sources were supplied:
-
-- `Carbon footprint and nutrition estimation of Chinese cuisines.xlsx`;
-- `Recipes_WWEIA_FCID_0510.csv`;
-- `dataFIELDv1.0.xlsx`.
-
-Their exact hashes and sizes are in
-[`data/manifests/source_files.json`](data/manifests/source_files.json). Until
-redistribution rights are confirmed, another researcher must lawfully obtain
-the files and place them under `data/raw/` with the exact listed filenames.
-These paths are ignored by Git.
-
-## Planned test strategy
-
-The reconstructed baseline will require independently checked unit tests for
-ordered-simplex geometry, complete interval constraints, shared-factor bounds,
-sign classification, disclosure inversion, aggregation, and factor
-interpolation. Permanent regressions will cover the four-corner false
-certificate, the 4.5%/5% inverse boundary, the truncated-interval midpoint, and
-near-zero abstention. Property tests will check uncertainty-set containment and
-shared-factor invariants.
-
-No such mathematical tests are claimed to be implemented in this bootstrap.
-
-## Reproducibility approach
-
-Future experiment entry points will load versioned configurations, verify
-input hashes, use deterministic seeds, write to dedicated output directories,
-record environment metadata, and compare recoverable frozen metrics. A
-reconstructed result will not be promoted merely because it appears plausible.
-
-The intended command shape is:
-
-```text
-python -m experiments.<experiment_name>.run
+```powershell
+Set-Location -LiteralPath 'D:\Final Year Project'
+pwsh -NoProfile -File .\scripts\setup_windows.ps1
+pwsh -NoProfile -File .\scripts\run_tests.ps1
 ```
 
-No experiment runner exists yet, and the local Python interpreter is currently
-unresolved.
+Put the three raw files under `data/raw/` using the exact filenames in [the SHA-256 source manifest](data/manifests/source_files.json). Place the original handoff ZIP, seven review packet ZIPs, proposal and two Stage 26 documents in `evidence/frozen/`, or supply their directory with `-EvidenceDir`. The file list and exact hashes are recorded in [the reproducibility manifest](preflight_reports/reproducibility_manifest.json).
 
-## Roadmap
+```powershell
+pwsh -NoProfile -File .\scripts\run_preflight.ps1
+pwsh -NoProfile -File .\scripts\run_experiments.ps1 -Stage stage18
+pwsh -NoProfile -File .\scripts\run_experiments.ps1 -Stage stage22 -Stage18Run '<printed Stage 18 directory>'
+pwsh -NoProfile -File .\scripts\run_experiments.ps1 -Stage stage24
+pwsh -NoProfile -File .\scripts\verify_reproducibility.ps1 -Stage18Run '<Stage 18 directory>' -Stage22Run '<Stage 22 directory>' -Stage24Run '<Stage 24 directory>'
+```
 
-The next phase is a narrow reconstruction of the validated robust oracle with
-the historical false-certificate case locked first. Subsequent work will
-reconstruct disclosure handling, uncertainty models, datasets, policies,
-dependence-aware evaluation, and Stage-20/22/24 experiments in separate,
-reviewable commits.
+Stage 22's runner also builds the recovered Stage 20 analysis. Each historical run prints a fresh directory under `historical_preflight/results/`. The archived-QUID repair is available as `-Repaired` for Stage 18/24 and applies only to a newly staged copy. See [execution commands](preflight_reports/execution_commands.md) and [test results](preflight_reports/08_END_TO_END_TEST_RESULTS.md).
 
-Observation-aware sequential acquisition, genuinely held-out evaluation,
-realistic observation and acquisition-cost models, broader commercial
-validation, and a production application remain active research tasks. See
-[docs/roadmap.md](docs/roadmap.md).
+## Repository layout
 
-## License and data rights
+- `src/food_carbon_cert/` holds the active data, geometry, certification, disclosure, and Stage 26 code.
+- `tests/` holds independent-reference comparisons, unit tests and regressions.
+- `historical_preflight/` holds the recovered experiment harness and local results. `scripts/stage26/` holds the recovered sequential study drivers and the frozen reference manifest.
+- `research_archive/` holds historical documentation and manifests. `evidence/` holds local source snapshots. Raw datasets, portable evidence packets and generated results are kept local.
+- `preflight_reports/` holds the Windows evidence receipts, proposal traceability, and final readiness assessment.
 
-Repository software is licensed under the MIT License. Third-party datasets
-and archived evidence may have separate rights; no redistribution permission
-is inferred from local availability.
-
-
+Use small commits that identify a verified behavior change and its evidence. Preserve archived results and record any prospective protocol revision before evaluating performance. Source-derived variability boxes, modeled factor observations, and pilot cost ratios are conditional research scenarios. Stronger generalization requires suitable observations and evaluation.

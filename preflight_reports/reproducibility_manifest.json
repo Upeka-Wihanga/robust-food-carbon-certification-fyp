@@ -1,0 +1,2847 @@
+{
+  "audit_date": "2026-11-24",
+  "audit_timezone": "Asia/Colombo",
+  "stage26_full_evaluation": "NOT EXECUTED",
+  "environment": "environment_manifest.txt",
+  "dependency_inventory": "dependency_inventory.txt",
+  "frozen_inputs": [
+    {
+      "path": "evidence/frozen/Codex_Research_Handoff_v1.zip",
+      "bytes": 2325075,
+      "sha256": "fab3765d578de8f98357a470dce2c9d54deb609638397122af86501071c43e0b"
+    },
+    {
+      "path": "evidence/frozen/Final_PreImplementation_Blind_Review_FROZEN.zip",
+      "bytes": 26145,
+      "sha256": "6950d4fd39513cef4d2c8406b477759fad8b3ed962ef1a26f91c959d8061d906"
+    },
+    {
+      "path": "evidence/frozen/FYP_Proposal_Robust_Food_Carbon_Certification_2026_27.pdf",
+      "bytes": 291023,
+      "sha256": "64dd8e51ec6a79a7e05bb81e21cc7000dc752e3281761c38fadcc3bcbf9734d1"
+    },
+    {
+      "path": "evidence/frozen/MASTER_Progress_Tracker_Stage26_After_Preflight.md",
+      "bytes": 20603,
+      "sha256": "bf371689b88fd054c30131eccea76665c9f05d0696da60cae10c6e7a80101b34"
+    },
+    {
+      "path": "evidence/frozen/MASTER_Progress_Tracker_Stage26_Start.md",
+      "bytes": 18185,
+      "sha256": "9106b02cfa537612d26fe30786088ba9e841c3a89fa6be5309d81dd44ede86aa"
+    },
+    {
+      "path": "evidence/frozen/Stage11BA6_Blind_Reviewer_Packet_FROZEN.zip",
+      "bytes": 22291,
+      "sha256": "2a25c1934d472235b51bc9982ca87f84d45c38d6252c23dbdbb08367e747bde2"
+    },
+    {
+      "path": "evidence/frozen/Stage14_QUID_Disclosure_Precision_Blind_Review_FROZEN.zip",
+      "bytes": 41560,
+      "sha256": "a113760d94b8c0fc570d895b2bf584eca111dab65992d85fa58d877c7df09f11"
+    },
+    {
+      "path": "evidence/frozen/Stage17_Corrected_Disclosure_Sufficiency_Blind_Review_FROZEN.zip",
+      "bytes": 3538960,
+      "sha256": "bb51fc34dc823813c4c8c36491cac4f437b0ed189cda4cf77e087b9d61015049"
+    },
+    {
+      "path": "evidence/frozen/Stage19_Strengthened_Contribution_Blind_Review_FROZEN.zip",
+      "bytes": 12097751,
+      "sha256": "0ec843867cd3a3ef8b9967b851c3e94f5cd3a9440291106ba44bac23fbf783f0"
+    },
+    {
+      "path": "evidence/frozen/Stage22_Information_Frontier_Blind_Review_FROZEN.zip",
+      "bytes": 79359,
+      "sha256": "13e11660796965ae1080820dd25a0b311dc238f1ace08c21de987c86a5467517"
+    },
+    {
+      "path": "evidence/frozen/Stage24_Targeted_Acquisition_Blind_Review_FROZEN.zip",
+      "bytes": 8269137,
+      "sha256": "e7c6b9600f3d5bdde248a53eea67f8562bd3ac973bde6aaa1b1c2fefd629d0ac"
+    },
+    {
+      "path": "evidence/frozen/Stage26_Frozen_Protocol_v1.md",
+      "bytes": 6983,
+      "sha256": "a278a81ac286ee6611e1b416d03672e81a0202b9063710bb89299215f03cd670"
+    }
+  ],
+  "raw_inputs": [
+    {
+      "expected_filename": "Carbon footprint and nutrition estimation of Chinese cuisines.xlsx",
+      "source_category": "guan_external_recipe_workbook",
+      "sha256": "22b55adad2b463fcff60f486560c66468923323609371ddaa5b3d42ddd34b80b",
+      "bytes": 157817,
+      "local_expected_path": "data/raw/Carbon footprint and nutrition estimation of Chinese cuisines.xlsx",
+      "commit_to_git": false,
+      "redistribution_status": "UNKNOWN_REQUIRES_LICENSE_CHECK"
+    },
+    {
+      "expected_filename": "Recipes_WWEIA_FCID_0510.csv",
+      "source_category": "fcid_wweia_recipe_commodity_source",
+      "sha256": "3689803e5ef099fd4831d1136dabba183bff5454fc998fa7d7b7da61cf766c56",
+      "bytes": 5863715,
+      "local_expected_path": "data/raw/Recipes_WWEIA_FCID_0510.csv",
+      "commit_to_git": false,
+      "redistribution_status": "UNKNOWN_REQUIRES_LICENSE_CHECK"
+    },
+    {
+      "expected_filename": "dataFIELDv1.0.xlsx",
+      "source_category": "datafield_impact_factor_source",
+      "sha256": "a2e0c8a609c88e96d679799666c37e678b75f60050cdc2eeb3e8b2498e9d4759",
+      "bytes": 1357202,
+      "local_expected_path": "data/raw/dataFIELDv1.0.xlsx",
+      "commit_to_git": false,
+      "redistribution_status": "UNKNOWN_REQUIRES_LICENSE_CHECK"
+    }
+  ],
+  "dataset_audit": {
+    "handoff_hashes_verified": 14,
+    "raw_sha256": {
+      "Carbon footprint and nutrition estimation of Chinese cuisines.xlsx": "22b55adad2b463fcff60f486560c66468923323609371ddaa5b3d42ddd34b80b",
+      "dataFIELDv1.0.xlsx": "a2e0c8a609c88e96d679799666c37e678b75f60050cdc2eeb3e8b2498e9d4759",
+      "Recipes_WWEIA_FCID_0510.csv": "3689803e5ef099fd4831d1136dabba183bff5454fc998fa7d7b7da61cf766c56"
+    },
+    "fcid": {
+      "rows": 129863,
+      "foods": 7154,
+      "columns": [
+        "Food_Code",
+        "Mod_Code",
+        "Ingredient_Num",
+        "FCID_Code",
+        "Cooked_Status",
+        "Food_Form",
+        "Cooking_Method",
+        "Commodity_Weight",
+        "CSFII_9498_IND",
+        "WWEIA_9904_IND",
+        "WWEIA_0510_IND"
+      ],
+      "raw_duplicate_rows_beyond_first": 0,
+      "raw_missing_key_or_mass": 40,
+      "raw_zero_weights": 0,
+      "raw_negative_weights": 0,
+      "baseline_positive_rows": 64225,
+      "baseline_unlinked_rows": 1547,
+      "baseline_unlinked_commodity_codes": 111,
+      "baseline_foods_with_unlinked_lines": 272
+    },
+    "datafield": {
+      "sheet_rows_including_headers": {
+        "DESCRIPTION": 18,
+        "FCID linkages": 1002,
+        "literature entries": 1646,
+        "Pivot Table_GHG": 335,
+        "Pivot Table_CED": 274,
+        "PROXY def'ns": 161,
+        "MassConv": 999
+      },
+      "usable_linkage_rows": 354,
+      "distinct_matched_commodity_codes": 354,
+      "conflicting_duplicate_mean_codes": 0,
+      "zero_factor_rows": 2,
+      "negative_factor_rows": 0,
+      "rows_with_missing_scaled_sd": 1
+    },
+    "guan": {
+      "source_rows": 320,
+      "parseable": 308,
+      "eligible": 61,
+      "cuisines": {
+        "Chuan Cuisine": 6,
+        "Hui Cuisine": 12,
+        "Lu Cuisine": 8,
+        "Min Cuisine": 5,
+        "Su Cuisine": 6,
+        "Xiang Cuisine": 8,
+        "Yue Cuisine": 10,
+        "Zhe Cuisine": 6
+      },
+      "within_cuisine_pairs": 222,
+      "reference_rows": 222,
+      "pairs_only_in_rebuild": [],
+      "pairs_only_in_reference": [],
+      "max_retained_relative_error": 0.0006079247568222376,
+      "positive_weight_mapping": {
+        "major_direct": 147,
+        "minor_direct": 251,
+        "minor_fallback": 219
+      },
+      "shared_factor_keys": {
+        "fallback": 102,
+        "direct": 105
+      },
+      "zero_weight_occurrences_if_retained": {
+        "fallback": 8,
+        "direct": 6
+      },
+      "additional_factor_keys_if_zero_weights_retained": {
+        "fallback": 3
+      },
+      "production_factor_rows_after_normalization": 426,
+      "zero_factors": 1,
+      "negative_factors": 0,
+      "equal_duplicate_factor_names": {
+        "duck": 1,
+        "red bell pepper": 1
+      },
+      "unmapped_major_ingredients": {
+        "cooked lard": 36,
+        "clear soup": 25,
+        "bamboo shoots": 13,
+        "shaojiu": 10,
+        "green onion": 8,
+        "chicken consommé": 8,
+        "eel": 8,
+        "broth": 7,
+        "shimizu": 7,
+        "green pepper": 6,
+        "shangtang": 6,
+        "red pepper": 6,
+        "winter bamboo shoots": 6,
+        "fresh soup": 5,
+        "eggs": 5,
+        "consommé": 5,
+        "garlic sprouts": 4,
+        "pepper": 4,
+        "shiitake": 4,
+        "clear water": 4,
+        "mixed oil": 3,
+        "shuifa fungus": 3,
+        "milk soup": 3,
+        "horseshoe": 3,
+        "white soup": 3,
+        "water starch": 2,
+        "pixian douban": 2,
+        "preserved egg": 2,
+        "bean paste": 2,
+        "cabbage heart": 2,
+        "magnolia slices": 2,
+        "pixian bean paste": 2,
+        "green peppers": 2,
+        "yam": 2,
+        "leek": 2,
+        "shuifa scallops": 2,
+        "dashi": 2,
+        "cornstarch": 2,
+        "sweet noodle sauce": 2,
+        "coriander": 2,
+        "chicken thighs": 2,
+        "milk": 2,
+        "meat consommé": 2,
+        "pork trotter tendon": 2,
+        "winter shoots": 2,
+        "green vegetables": 2,
+        "pork broth": 2,
+        "cooked chicken fat": 2,
+        "blue crab": 2,
+        "guiyu": 2,
+        "edamame tofu": 2,
+        "fungus": 2,
+        "herring": 2,
+        "tea oil": 2,
+        "sour radish": 2,
+        "green garlic sprouts": 1,
+        "tender rooster breast": 1,
+        "tender rooster": 1,
+        "lettuce tips": 1,
+        "net beef sirloin tenderloin": 1,
+        "dry coarse vermicelli": 1,
+        "net lean beef": 1,
+        "cool boiled water": 1,
+        "old kimchi brine": 1,
+        "vegetable": 1,
+        "green bean": 1,
+        "tsai rooster": 1,
+        "green chilli": 1,
+        "millet spicy": 1,
+        "pickled pepper": 1,
+        "pickled pepper water": 1,
+        "fish balls": 1,
+        "ham sausage slices": 1,
+        "lotus root slices": 1,
+        "pork belly slices": 1,
+        "shrimp dumplings": 1,
+        "dried meat": 1,
+        "brine": 1,
+        "offal": 1,
+        "green onion and ginger ale": 1,
+        "wonton skin": 1,
+        "pork kidney": 1,
+        "sharp pepper": 1,
+        "dried chili pepper": 1,
+        "jiwei shrimp": 1,
+        "red peppers": 1,
+        "edible oil": 1,
+        "guoba": 1,
+        "chopped green onion": 1,
+        "cooked sesame": 1,
+        "fuqiang powder": 1,
+        "red oil chili": 1,
+        "pork fat & lean meat": 1,
+        "white oil": 1,
+        "baby cabbage": 1,
+        "white clams": 1,
+        "peanut coat": 1,
+        "pig intestine": 1,
+        "lees": 1,
+        "sea sausage": 1,
+        "big clam meat": 1,
+        "shuifa hoof tendon": 1,
+        "shuifa radix": 1,
+        "fresh conch meat": 1,
+        "shuifa shark": 1,
+        "shih tzu": 1,
+        "pho": 1,
+        "water tofu": 1,
+        "noodles": 1,
+        "light soup": 1,
+        "suburban vegetables": 1,
+        "net pigeon": 1,
+        "sweet and sour pot": 1,
+        "bacon": 1,
+        "brisket": 1,
+        "rose dew": 1,
+        "ringing conch chips": 1,
+        "plum cabbage": 1,
+        "net suckling pig": 1,
+        "eastern star grouper": 1,
+        "chestnuts": 1,
+        "green beans": 1,
+        "anchovy": 1,
+        "pork sauce": 1,
+        "live duck": 1,
+        "live mallard": 1,
+        "live turtle": 1,
+        "chicken thigh": 1,
+        "pork white soup": 1,
+        "chives": 1,
+        "green cabbage leaves": 1,
+        "green choy heart": 1,
+        "green onion & ginger water": 1,
+        "gluten": 1,
+        "breadcrumb": 1,
+        "whitebait": 1,
+        "black fish": 1,
+        "cooked duck fat": 1,
+        "river prawns": 1,
+        "red yeast water": 1,
+        "ginkgo seed": 1,
+        "iron sparrow": 1,
+        "fresh mussel tip": 1,
+        "fresh razor clams": 1,
+        "jujube": 1,
+        "snail meat": 1,
+        "red lees": 1,
+        "ketchup": 1,
+        "pig ridge": 1,
+        "pork trotter tip": 1,
+        "fresh prawns": 1,
+        "sweet potato powder": 1,
+        "kale": 1,
+        "shacha sauce": 1,
+        "sand clams": 1,
+        "red grain": 1,
+        "mushroom": 1,
+        "chicken soup": 1,
+        "moutai": 1,
+        "red grains": 1,
+        "bean miao": 1,
+        "minced bread": 1,
+        "chicken loin": 1,
+        "choy clam": 1,
+        "prawns": 1,
+        "big river crab": 1,
+        "white fish": 1,
+        "sheep net oil": 1,
+        "pickled cabbage": 1,
+        "coconut white": 1,
+        "cooked fresh meat": 1,
+        "spring bamboo shoots": 1,
+        "prawn": 1,
+        "indica": 1,
+        "ulva": 1,
+        "red yeast powder": 1,
+        "mustard": 1,
+        "big frog": 1,
+        "radish": 1,
+        "scallops": 1,
+        "fire heel": 1,
+        "enoki mushrooms": 1,
+        "fried rice": 1,
+        "dried bean curd": 1,
+        "fresh bamboo shoots": 1,
+        "leeks": 1,
+        "onions": 1,
+        "red bell peppers": 1,
+        "pork ravioli": 1,
+        "lamb kidney": 1,
+        "green leafy vegetables": 1,
+        "sufu juice": 1,
+        "dried clams": 1,
+        "ziji": 1,
+        "tender hen": 1,
+        "fat hen": 1,
+        "pork meat": 1,
+        "xiang white lotus": 1,
+        "sour pork": 1,
+        "refined salt": 1,
+        "chopped chilli paste": 1,
+        "pig large intestine": 1,
+        "haihong pepper": 1,
+        "youxian xianggan": 1,
+        "belly": 1,
+        "pig colon": 1,
+        "clearing": 1,
+        "chaotian pepper": 1,
+        "lily powder": 1,
+        "xianggan": 1,
+        "chopped chilli": 1,
+        "umeboshi": 1,
+        "canola oil": 1
+      },
+      "exclusion_counts": {
+        "unmapped major ingredients": 222,
+        "production total outside 1% tolerance": 25,
+        "unparseable": 12
+      },
+      "exclusions": [
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Sour Fish",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fresh soup"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Mapo Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "broth"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Fish-Flavored Shredded Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "mixed oil",
+            "shuifa fungus"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Twice-cooked Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green garlic sprouts",
+            "mixed oil"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Boiled Pork Slices",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Spicy Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "broth",
+            "tender rooster breast"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Boiled Fish in Chili Oil",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fresh soup"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Kung Pao Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green onion",
+            "water starch"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Mouthwatering Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "tender rooster"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Eggplant with Fish Flavor",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Boiled Spicy Beef",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "broth",
+            "garlic sprouts",
+            "lettuce tips",
+            "mixed oil",
+            "net beef sirloin tenderloin",
+            "pixian douban"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Vermicelli with Minced Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "dry coarse vermicelli",
+            "fresh soup",
+            "net lean beef"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Sichuan Pickled Cabbage",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cool boiled water",
+            "old kimchi brine",
+            "vegetable"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Dry-fried String Beans",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green bean"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Bang Bang Chicken Shreds",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "tsai rooster"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Green Pepper with Twice-cooked Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green pepper"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Green Pepper and Century Egg",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green chilli",
+            "preserved egg"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Spicy Hot Pot",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Sour and Spicy Chicken Feet",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "millet spicy",
+            "pickled pepper",
+            "pickled pepper water"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Mala Hotpot",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fish balls",
+            "ham sausage slices",
+            "lotus root slices",
+            "pork belly slices",
+            "shrimp dumplings"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Fragrant Tofu Twice-Cooked Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bean paste",
+            "dried meat"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Spouse's Sliced Beef in Chili Sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "brine",
+            "offal"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Braised Chicken with Clear Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cabbage heart",
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Salt-baked Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "garlic sprouts",
+            "pixian douban"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Drunkard Peanuts",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Red Oil Hand-Pulled Noodles",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green onion and ginger ale",
+            "wonton skin"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Spicy Pork Intestines",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fresh soup",
+            "magnolia slices",
+            "pork kidney",
+            "shuifa fungus"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Spicy Twice-Cooked Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pixian bean paste",
+            "sharp pepper"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Tiger Skin Green Pepper",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pepper"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Spicy Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "dried chili pepper",
+            "green peppers",
+            "jiwei shrimp",
+            "red peppers"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Stir-fried Pork Slices with Rice Cracker",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "edible oil",
+            "fresh soup",
+            "guoba"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Sichuan Cold Noodles",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chopped green onion",
+            "cooked sesame",
+            "fuqiang powder",
+            "red oil chili"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Stir-Fried Pork with Green Peppers",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green pepper"
+          ]
+        },
+        {
+          "cuisine": "Chuan Cuisine",
+          "recipe": "Golden Sands corn",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Sweet and Sour Pork Ribs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "broth"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Pork with Egg and Fungus",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eggs",
+            "garlic sprouts",
+            "pork fat & lean meat",
+            "white oil"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Milk Soup with Cattail",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "baby cabbage",
+            "milk soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Four Joy Meatballs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "horseshoe"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Clam Grits Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "white clams"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Scallion-Braised Sea Cucumber",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Clear Shark Fin Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cabbage heart",
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Clear Soup with Bird's Nest Noodles",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Pan-Fried Yellow Croaker",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "peanut coat"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Nine Transformations of Large Intestine",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "pig intestine"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Candied Yam",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "yam"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Steamed Fish Slices",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "lees"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Jinan Crispy Pot",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Mix Jellyfish",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Sweet and Sour Carp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Steamed Chicken Slices with Egg Flower",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Cloth Bag Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "milk soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Steamed Pork with Rice Powder",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Steamed Bird's Nest Noodles with Egg Flower",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Fried Sea Cucumber with Leek",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "leek",
+            "sea sausage"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Stir-fried Clams",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "big clam meat",
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Shark Fin with Three Delicacies",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Tendon Braised Sea Cucumber",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "green onion",
+            "shuifa hoof tendon",
+            "shuifa radix"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Stir-fried Sea Snail",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "fresh conch meat"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Steamed Scallops with Egg White",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "shuifa scallops"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Boshan Tofu Pudding",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "shuifa fungus"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Braised Dried Scallops",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "shuifa scallops"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Cinnamon Pork Knuckle",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Yellow stewed soft-shelled turtle",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "dashi"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Oil-fried Big Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "consommé"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Osmanthus Shark Fin",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "shuifa shark"
+          ]
+        },
+        {
+          "cuisine": "Lu Cuisine",
+          "recipe": "Tongue of the Punch Tongue",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "consommé",
+            "shih tzu"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Dry-fried Beef Hor Fun",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pho"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Hakka Stuffed Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "water tofu"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Shrimp Dumplings",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "cornstarch",
+            "noodles"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Wenchang Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "light soup",
+            "shangtang",
+            "suburban vegetables"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Braised Pigeon in Soy Sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "net pigeon",
+            "sweet and sour pot"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Eight Treasure Gourd Duck",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Boatman's Congee",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Marinated Pig's Trotters",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Steamed Spare Ribs with Black Bean Sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cornstarch"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Sweet Barbecue Pork",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Oyster Omelette",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Three Cup Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "red pepper"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Cantonese Preserved Meat Rice Pot",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bacon"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Curried Beef Brisket",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "brisket"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Rose-flavored Soy Sauce Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "rose dew"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Shrimp Wonton",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Fish-Fragrant Eggplant Casserole",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shangtang"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Fried Abalone Slices with Oil",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "ringing conch chips"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Braised Pork with Preserved Vegetable",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "plum cabbage"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Crispy Roast Suckling Pig",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "net suckling pig",
+            "sweet noodle sauce"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Steamed Poon Fish",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eastern star grouper"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Abalone Sauce Braised Sea Cucumber",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green onion"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Abalone balls in clear soup",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Garlic Pork Ribs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "coriander"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Boiled Shrimp",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Lotus Leaf Glutinous Rice Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chestnuts",
+            "chicken thighs",
+            "green beans"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Shrimp Balls in Clear Soup",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "White Ginkgo Pork Belly",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Slippery Shrimp with Egg",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eggs",
+            "milk"
+          ]
+        },
+        {
+          "cuisine": "Yue Cuisine",
+          "recipe": "Stir-fried Chicken with Clay Pot",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shiitake"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Steamed Shad",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "anchovy",
+            "bamboo shoots",
+            "pork sauce"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Yellow Mud Chicken",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Three-Dish Duck",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "live duck",
+            "live mallard"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Farewell My Concubine",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken consommé",
+            "live turtle"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Steamed Chicken with Ham",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken consommé",
+            "chicken thigh",
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Stewed Soft-Shelled Turtle",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eel"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Jinling Meatballs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "meat consommé",
+            "pork trotter tendon"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Cabbage in white sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pork white soup",
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Braised Chestnut Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "winter shoots"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Roast Duck with Barbecued Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chives",
+            "green cabbage leaves"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Pengcheng fish balls",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken consommé"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Lamb with Stuffed Fish",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shimizu"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Crystal Pork Knuckle",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Braised Pork Ball in Brown Sauce with Crab Roe",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green choy heart",
+            "green onion & ginger water"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Boil the chicken broth with dried shreds",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken consommé",
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Meat Stuffed Fried Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "gluten",
+            "shimizu"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Pine Nut Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken consommé"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Duck Pouch Shark Fin",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Watermelon Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "consommé"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Braised Soft-shelled Turtle",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shimizu"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Eight-Treasure Rice Pudding",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear water",
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Biluochun Shrimp",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Crispy Anchovies",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "breadcrumb",
+            "whitebait"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Braised Ham in Honey Sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Fish and Fish Roe Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "black fish",
+            "chicken consommé",
+            "cooked lard",
+            "green vegetables",
+            "winter bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Phoenix Tail Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked duck fat",
+            "river prawns"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Cherry Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pork broth",
+            "red yeast water"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Su's Braised Pork",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Wansan Pork Knuckle",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "ginkgo seed",
+            "water starch"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Wensi Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken consommé"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Lotus Fried Sparrow",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "iron sparrow"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Wuxi Crispy Eel",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eel",
+            "shimizu"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Mirror Box Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pork broth"
+          ]
+        },
+        {
+          "cuisine": "Su Cuisine",
+          "recipe": "Braised Eel",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eel",
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Fotiaoqiang",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Steamed Sea Clam with Chicken Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fresh mussel tip"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Sweet and Sour Bamboo Joint-shaped Pork",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Stir-fried Fresh Clam",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fresh razor clams",
+            "shangtang",
+            "winter bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Tai Chi Taro Pudding",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "jujube"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Fermented Rice Wine and Conch Slices",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shangtang",
+            "snail meat",
+            "winter bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Fry the eel",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "eel",
+            "red lees"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Southern Fried Liver",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "winter bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Lychee Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "ketchup"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Drunken Pork Ribs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "horseshoe",
+            "pig ridge"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Shark's Fin in Purse",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pork trotter tip"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Dragon-Body and Phoenix-Tail Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fresh prawns"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Braised Abalone",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "green vegetables",
+            "winter bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Chicken Mousse with Shredded Bamboo Shoots",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked chicken fat",
+            "cooked lard",
+            "eggs",
+            "winter shoots"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Minced Pork Fish Lip",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "white soup"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Fuzhou Fish Balls",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "sweet potato powder"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Meat Ravioli",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Crab Rice with Eight Delicacies",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "blue crab",
+            "shangtang"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Deep-fried Red Fermented Rice Eel",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eel"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Dried Pork Slices",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Raw Pork Shengjian",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Stir-fried Beef with Satay Sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "kale",
+            "shacha sauce"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Stewed Mutton with Fermented Rice Wine",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Stir-fried Clam with Scallops",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "sand clams",
+            "shangtang",
+            "shiitake"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Red Wine Fish",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear water",
+            "red grain"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Five Willows Residence",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "White Snow Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "mushroom"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Golden Thread Tofu Dried",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Three Delicacies Braised Sea Cucumber",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Steamed Chicken with Fermented Rice Wine",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken soup",
+            "moutai",
+            "red grains",
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Chrysanthemum Fish",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Mushroom and Tofu Scramble",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "magnolia slices"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Minced Chicken with Pea Sprouts",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bean miao",
+            "milk soup"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Sautéed Duck Slices with Ginger Sprouts",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "winter bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Min Cuisine",
+          "recipe": "Fried Fish Sticks",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "minced bread"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Two Color Kidney",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "chicken loin"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Fairy's Thick Soup",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Sautéed Crab with Bean Sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "blue crab"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Fish Head Thick Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "choy clam"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Three Pieces of Pounded Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "consommé",
+            "prawns"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Sister Song's Fish Gruel",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "guiyu"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Crab Stuffed with Orange",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "big river crab"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Salted Fish with Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "white fish"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Plum Meat",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Imperial Braised Mutton",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear water",
+            "sheep net oil"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Crispy Shrimp Balls in the Shape of Fish Scale",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "eggs"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Snow Vegetable and Yellow Croaker Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "pickled cabbage"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Braised Softshell Turtle in Rock Sugar",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Braised Eel in a Wok",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "eel",
+            "green onion"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Traditional Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "white soup"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Multicolored Eel Noodles",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "coconut white",
+            "pepper",
+            "red pepper"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Three Delicacies Fish Roll",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "clear soup",
+            "shiitake"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Spring Bamboo Shoots with Pork Belly",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked chicken fat",
+            "cooked fresh meat",
+            "shaojiu",
+            "spring bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "West Lake Fish in Vinegar Gravy",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear water"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Longjing Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "prawn"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Lotus Leaf Steamed Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "indica",
+            "sweet noodle sauce"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "West Lake Ulva Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "consommé",
+            "ulva"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Hangzhou Braised Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "milk",
+            "white soup"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Tiger run vegetarian ham",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "red yeast powder",
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Dried Vegetables Braised Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "mustard"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Clam and Yellow Croaker Soup",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Mixed Three Delicacies with Clam",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "big frog",
+            "leek",
+            "shimizu"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Braised Bamboo Shoots in Oil",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Fried Eel Slices with Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "eel"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Steamed Dried Scallops with Meat",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "radish",
+            "scallops"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Fried Sheep Tail with Red Bean Paste",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bean paste",
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Dongpo Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Stir-fried Squid Rolls",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup"
+          ]
+        },
+        {
+          "cuisine": "Zhe Cuisine",
+          "recipe": "Fire-Grilled Heavenly Duck",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fire heel",
+            "shimizu"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Huizhou Furry Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "broth",
+            "edamame tofu"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Hu's Special Hotpot",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "enoki mushrooms"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Stir-fried Black Fungus with Eggs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green onion"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Braised Pork with Dried Bamboo Shoots",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Hui Zhou Yuan Zi",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fried rice"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Fried Eel with Scallions",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "broth",
+            "cooked lard",
+            "eel"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Fried Hairy Tofu in Tiger Skin Style",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "broth",
+            "edamame tofu"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Sanhe Stir-fried Mix",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "dried bean curd",
+            "fresh bamboo shoots",
+            "fungus",
+            "green peppers",
+            "leeks",
+            "onions",
+            "red bell peppers"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Sanhe Rice Dumplings",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Braised Fish Tail in Brown Sauce",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "herring"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Dried Scallops with Radish",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Wonton Duck",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pork ravioli"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Huizhou Salted Tongue",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Li Hongzhang Hotchpotch",
+          "reason": "unparseable"
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Fish Biting Sheep",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken consommé",
+            "cooked lard",
+            "guiyu",
+            "lamb kidney"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Bagongshan Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "fungus"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Loquat-shaped Pork Liver",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green leafy vegetables"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Five-spice Marinated Chrysanthemum Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Chicken Wrapped in Lotus Leaf",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Roast Grouse",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "horseshoe"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Shredded Chicken with Chrysanthemum",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "shiitake"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Bao Gong Crispy Fish",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shaojiu"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Fermented Bean Curd Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "green onion",
+            "sufu juice"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Braised Fish in Hui Style",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "herring"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Huangshan Braised Pigeon",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "yam"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Braised Clam Meat with Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots",
+            "dried clams"
+          ]
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Braised Ham and Soft-shelled Turtle",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Hui Cuisine",
+          "recipe": "Wenzheng Mountain Bamboo Shoots",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "bamboo shoots"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Spicy Chicken Cubes",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "ziji"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Dong'an Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "cooked lard",
+            "tender hen"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Crispy Duck with Sesame Seeds",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Zuan'an-style Shark's Fin Soup",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "fat hen",
+            "pork meat"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Glutinous Rice with Rock Sugar and Lotus Seeds",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "xiang white lotus"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Xiangxi Sour Pork",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "meat consommé",
+            "sour pork",
+            "tea oil"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Goldfish Playing with Lotus",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "refined salt"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Spicy Fish Head",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chopped chilli paste"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Stir-fried Yellow Beef Slices",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pepper",
+            "red pepper"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Chili and Preserved Egg Mash",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "pepper",
+            "preserved egg"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Dry Pot Pork Intestines",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "dashi",
+            "pig large intestine"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "General Zuo's Chicken",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chicken thighs",
+            "eggs"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Yongzhou Blood Duck",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "tea oil"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Dry Pot Frog Legs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green pepper",
+            "pixian bean paste",
+            "red pepper"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Stir-Fried You County Dried Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "garlic sprouts",
+            "haihong pepper",
+            "youxian xianggan"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Spicy and Sour Bullfrog",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Sour Radish Stir-fried Tripe",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "belly",
+            "green pepper",
+            "red pepper",
+            "sour radish"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Spicy Chicken Gizzards",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "sour radish"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Stir-fried Intestine",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green pepper",
+            "pig colon"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Bandit-Style Pig Liver",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clearing"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Refreshing Fish Skin",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "coriander",
+            "green onion"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Charcoal Grilled Bullfrog",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Perilla Frog",
+          "reason": "production total outside 1% tolerance",
+          "unmapped_major": []
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Sweet Oil Rice Cake",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "shimizu"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Spicy Stir-fried Marinated Eggs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green pepper"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Spicy Frog Legs",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chaotian pepper"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Junshan Chicken Slices",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "cooked lard",
+            "lily powder"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Shredded Pork with Dried Tofu",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "red pepper",
+            "xianggan"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Steamed Chicken with Vinegar",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "chopped chilli"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Xiangxi Grandma's Dishes",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "green onion",
+            "umeboshi"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Tendons with Osmanthus",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "clear soup",
+            "pork trotter tendon"
+          ]
+        },
+        {
+          "cuisine": "Xiang Cuisine",
+          "recipe": "Spicy Shrimp",
+          "reason": "unmapped major ingredients",
+          "unmapped_major": [
+            "canola oil"
+          ]
+        }
+      ],
+      "windows_normalization": {
+        "fcid_recipe_mod_groups": 12069,
+        "fcid_food_codes": 7154,
+        "ingredient_rows": 129863,
+        "bad_source_order_recipes": 0,
+        "normalization_status": {
+          "NORMALIZED": 12029,
+          "MISSING_COMPOSITION": 40
+        },
+        "datafield_rows_examined": 999,
+        "blank_datafield_rows": 645,
+        "retained_datafield_observations": 354
+      }
+    }
+  },
+  "original_local_active_commit": "4c55dade9f9ef1b3101c6ad235c15699d229022e",
+  "historical_manifest_entries": {
+    "stage18": 78,
+    "stage24": 27
+  },
+  "stage26_frozen_reference": {
+    "path": "scripts/stage26/frozen_run_manifest.json",
+    "bytes": 4399,
+    "sha256": "ea52d6580bdb3126d7bada218c395f9dbbca58ebcdeeb671e315ea89f6cefc43"
+  },
+  "stage26_original_archive_audit": {
+    "implementation_hashes_checked": 10,
+    "mismatches": {},
+    "partial_gzip": "EOFError: Compressed file ended before the end-of-stream marker was reached",
+    "readable_rows": 317132,
+    "expected_complete_rows": 621600,
+    "pass1_files": [
+      "heldout_records.csv.gz"
+    ],
+    "pass2_exists": false
+  },
+  "stage26_identity": {
+    "cohort_sha256": "217cb64c526354dee61d143db29abf7737f916425190c0eb9b9c20f4dede3076",
+    "pair_manifest_sha256": "ead9049592db90a60f9ed0628c2ff1f9de1d9516191b2723300e0481a232e4c1"
+  },
+  "active_stage26_smoke": {
+    "mode": "smoke",
+    "pair": "02bfc0a5704353e4a28f6940054a9acfc85fbb202c2dab55d8b52eda85028fa2:317e34788d0166d02d5752ae485aa1651d249c008f1ed03362d8f7aeb9da3710",
+    "world_seed": 26000,
+    "trajectories": 28,
+    "acquisitions": 10,
+    "first_action_kinds": {
+      "SHARE": 4,
+      "FACTOR": 3
+    },
+    "deterministic_replay": true,
+    "safety": {
+      "containment_failures": 0,
+      "false_direction": 0,
+      "budget_violation": 0,
+      "repeated_action": 0,
+      "post_certificate_action": 0
+    }
+  },
+  "test_counts": {
+    "active_suite_passed": 115,
+    "archived_math_suite_passed": 16,
+    "failed": 0,
+    "skipped": 0
+  },
+  "archived_oracle_lp": {
+    "cases": 220,
+    "direction_mismatches": 0,
+    "maximum_lower_error": 1.3322676295501878e-15,
+    "maximum_upper_error": 1.7763568394002505e-15
+  },
+  "archived_oracle_windows_profile": [
+    {
+      "ingredients_per_food": 2,
+      "shared_codes": 1,
+      "geometry_builds_per_comparison": 2,
+      "vertices_per_food": [
+        2,
+        2
+      ],
+      "closed_form_box_supports_per_comparison": 8,
+      "optimizer_calls_per_comparison": 0,
+      "bounds": [
+        -1.2125,
+        0.025000000000000022
+      ],
+      "repeats": 30,
+      "mean_wall_ms_per_comparison": 0.8392433332725583,
+      "traced_peak_allocation_bytes": 3789
+    },
+    {
+      "ingredients_per_food": 4,
+      "shared_codes": 2,
+      "geometry_builds_per_comparison": 2,
+      "vertices_per_food": [
+        8,
+        8
+      ],
+      "closed_form_box_supports_per_comparison": 128,
+      "optimizer_calls_per_comparison": 0,
+      "bounds": [
+        -1.575,
+        0.30000000000000004
+      ],
+      "repeats": 30,
+      "mean_wall_ms_per_comparison": 1.2937433333718218,
+      "traced_peak_allocation_bytes": 13616
+    },
+    {
+      "ingredients_per_food": 8,
+      "shared_codes": 4,
+      "geometry_builds_per_comparison": 2,
+      "vertices_per_food": [
+        25,
+        25
+      ],
+      "closed_form_box_supports_per_comparison": 1250,
+      "optimizer_calls_per_comparison": 0,
+      "bounds": [
+        -1.6437499999999998,
+        0.41874999999999996
+      ],
+      "repeats": 30,
+      "mean_wall_ms_per_comparison": 6.805370000074618,
+      "traced_peak_allocation_bytes": 194584
+    },
+    {
+      "ingredients_per_food": 12,
+      "shared_codes": 6,
+      "geometry_builds_per_comparison": 2,
+      "vertices_per_food": [
+        60,
+        60
+      ],
+      "closed_form_box_supports_per_comparison": 7200,
+      "optimizer_calls_per_comparison": 0,
+      "bounds": [
+        -1.6666666666666665,
+        0.4583333333333335
+      ],
+      "repeats": 30,
+      "mean_wall_ms_per_comparison": 32.609990000006896,
+      "traced_peak_allocation_bytes": 1137629
+    },
+    {
+      "ingredients_per_food": 16,
+      "shared_codes": 8,
+      "geometry_builds_per_comparison": 2,
+      "vertices_per_food": [
+        96,
+        96
+      ],
+      "closed_form_box_supports_per_comparison": 18432,
+      "optimizer_calls_per_comparison": 0,
+      "bounds": [
+        -1.678125,
+        0.47812500000000024
+      ],
+      "repeats": 30,
+      "mean_wall_ms_per_comparison": 94.86143666678497,
+      "traced_peak_allocation_bytes": 3769885
+    }
+  ],
+  "independent_pilot_audit": {
+    "rows_checked": 83280,
+    "certificate_rows": {
+      "share": 12160,
+      "factor": 3504
+    },
+    "rows_violating_budget_containment_or_direction": 0
+  },
+  "metric_comparison": {
+    "csv_matches": {
+      "Stage18_4_Guan61_Policy_Summary.csv": "numerically equivalent at 1e-12",
+      "Stage18_5_Node_Bootstrap_Replicates.csv": "numerically equivalent at 1e-12",
+      "Stage24_Exact_Subset_Audit_Summary.csv": "byte-identical",
+      "Stage24_Targeted_Acquisition_Bootstrap_Summary.csv": "byte-identical",
+      "Stage24_Secondary_Saturation_Bootstrap_Summary.csv": "byte-identical",
+      "Stage22_Equal_Budget_Bootstrap_Summary.csv": "byte-identical",
+      "Stage22_Equal_Budget_Summary.csv": "byte-identical",
+      "Stage22_Local_Dominance_Bootstrap_Summary.csv": "byte-identical",
+      "Stage22_Local_Marginal_Bootstrap_Summary.csv": "byte-identical",
+      "Stage22_Local_Marginal_States.csv": "byte-identical",
+      "Stage22_Mechanism_Stratified_Summary.csv": "byte-identical",
+      "Stage22_Practical_Absolute_Share_Radius_Summary.csv": "byte-identical",
+      "Stage22_Primary_Surface_Bootstrap_CI.csv": "byte-identical",
+      "Stage22_Response_Surface_Coverage.csv": "byte-identical"
+    },
+    "stage20_four_cell_group_matches": 33
+  },
+  "output_locations_relative_to_project": {
+    "stage18": "historical_preflight/results/windows-stage18",
+    "stage18_rounding_repair": "historical_preflight/results/stage18.584b864219f84ed893a5dc36c0995d7c",
+    "stage20_and_stage22": "historical_preflight/results/stage22.w8pwh4jt",
+    "stage24_windows_spawn": "historical_preflight/results/windows-stage24-spawn",
+    "final_suite": ".cache/final-windows-suite.log",
+    "data_audit": ".cache/windows-datasets.json",
+    "archived_oracle": ".cache/windows-archived-oracle.json",
+    "active_stage26_smoke": ".cache/windows-stage26-action-smoke.json",
+    "expected_metric_comparison": ".cache/windows-full-comparison.json",
+    "stage26_archive_audit": ".cache/stage26-archive-audit.json",
+    "integrated_preflight": ".cache/run-final-preflight.txt",
+    "stage24_rounding_repair": "historical_preflight/results/stage24.421d592677e242d98a035bfca3b440c4",
+    "expected_metric_comparison_with_rounding_repair": ".cache/windows-repaired-comparison.json"
+  },
+  "raw_only_reconstruction_qualified": [
+    "Historical FCID100 selection and historical rank identities are supplied as frozen artifacts.",
+    "Stage 20 separate legacy interval-summary build is unavailable.",
+    "The archived Stage 26 pass was interrupted before completion."
+  ],
+  "active_oracle_windows_profile": [
+    {
+      "ingredient_count_per_food": 2,
+      "geometry_builds": 2,
+      "closed_form_support_endpoints": 8,
+      "LP_calls": 0,
+      "repetitions": 30,
+      "mean_ms": 1.416606666801575,
+      "peak_traced_bytes": 5400
+    },
+    {
+      "ingredient_count_per_food": 4,
+      "geometry_builds": 2,
+      "closed_form_support_endpoints": 128,
+      "LP_calls": 0,
+      "repetitions": 30,
+      "mean_ms": 2.5584666667176257,
+      "peak_traced_bytes": 20212
+    },
+    {
+      "ingredient_count_per_food": 8,
+      "geometry_builds": 2,
+      "closed_form_support_endpoints": 1250,
+      "LP_calls": 0,
+      "repetitions": 30,
+      "mean_ms": 9.543430000000322,
+      "peak_traced_bytes": 267392
+    },
+    {
+      "ingredient_count_per_food": 12,
+      "geometry_builds": 2,
+      "closed_form_support_endpoints": 7200,
+      "LP_calls": 0,
+      "repetitions": 30,
+      "mean_ms": 16.772976666591905,
+      "peak_traced_bytes": 2204232
+    },
+    {
+      "ingredient_count_per_food": 16,
+      "geometry_builds": 2,
+      "closed_form_support_endpoints": 18432,
+      "LP_calls": 0,
+      "repetitions": 30,
+      "mean_ms": 31.91411333342937,
+      "peak_traced_bytes": 7443784
+    }
+  ],
+  "rounding_repaired_reproduction": {
+    "stage18_and_stage24": "PASS",
+    "metrics_match_original_replay": true,
+    "pilot_rows_checked": 83280
+  }
+}

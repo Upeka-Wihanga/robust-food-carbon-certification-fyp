@@ -1,0 +1,17 @@
+Windows preflight tests
+Final command: pwsh -NoProfile -File .\scripts\run_tests.ps1
+Active Windows suite: 115 passed in 137.93 s
+Archived independent suite: 16 passed in 17.21 s
+Totals: 131 passed, 0 failed, 0 skipped
+Initial active baseline: 107 passed, 3 failed (fixture bytes and Python sum)
+tests\test_independent_comparator.py independent-comparator summary: cases=100, classification_mismatches=0, maximum_lower_error=1.7763568394002505e-15, maximum_upper_error=2.2204460492503131e-15
+Archived independent LP: 220 cases, 0 classification mismatches
+Stage 18: metric verification and 5,000-replicate rebuild PASS
+Stage 20: 33 archived four-cell groups PASS
+Stage 22: 9 reference CSVs byte-identical
+Stage 24: original driver fails Windows fork; portable rerun and secondary analysis PASS
+Stage 24: 3 reference CSVs byte-identical; 83,280 targeted rows passed the budget/containment/direction audit
+Rounding-repaired Stage 18 and 24: expected-metric checks and all compared summaries PASS
+Stage 26: 28 smoke trajectories, 10 acquisitions per pass, deterministic replay, 0 safety violations
+Clean Windows index checkout: exact hashes preserved for the FCID CSV fixture and frozen Stage 26 manifest
+Stage 26 full held-out study, API, and frontend: not executed
