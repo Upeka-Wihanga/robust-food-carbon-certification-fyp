@@ -16,6 +16,7 @@ import numpy as np
 from numpy.typing import NDArray
 
 from food_carbon_cert.certification import (
+    DEFAULT_ENGINEERING_TOLERANCE,
     Decision,
     calculate_robust_bounds,
     classify_bounds,
@@ -372,7 +373,11 @@ def state_value(
         state.factor_intervals,
     )
     value = StateValue(
-        classify_bounds(bounds.lower, bounds.upper) is not Decision.ABSTAIN,
+        classify_bounds(
+            bounds.lower,
+            bounds.upper,
+            tolerance=max(DEFAULT_ENGINEERING_TOLERANCE, bounds.roundoff_margin),
+        ) is not Decision.ABSTAIN,
         bounds.upper - bounds.lower,
     )
     if cache is not None and cache.enabled:

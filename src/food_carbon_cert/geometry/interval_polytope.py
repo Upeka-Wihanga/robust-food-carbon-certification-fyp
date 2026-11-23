@@ -9,7 +9,7 @@ import numpy as np
 from numpy.typing import NDArray
 
 from .ordered_simplex import ordered_simplex_vertices, rank_feasible_interval
-from .vertices import deduplicate_vertices, is_ordered_simplex_point
+from .vertices import is_ordered_simplex_point
 
 
 class InfeasibleRankIntervalError(ValueError):
@@ -36,7 +36,7 @@ def _validated_interval(
     if clip:
         clipped_lower = max(lower, feasible_lower)
         clipped_upper = min(upper, feasible_upper)
-        if clipped_lower > clipped_upper + atol:
+        if clipped_lower > clipped_upper:
             raise InfeasibleRankIntervalError(
                 "rank interval does not intersect the rank-feasible range"
             )
@@ -47,7 +47,13 @@ def _validated_interval(
             "rank interval extends outside the feasible range; pass clip=True "
             "to request explicit clipping"
         )
-    return max(lower, feasible_lower), min(upper, feasible_upper)
+    clipped_lower = max(lower, feasible_lower)
+    clipped_upper = min(upper, feasible_upper)
+    if clipped_lower > clipped_upper:
+        raise InfeasibleRankIntervalError(
+            "rank interval does not intersect the rank-feasible range"
+        )
+    return clipped_lower, clipped_upper
 
 
 def one_rank_slab_vertices(
@@ -72,7 +78,7 @@ def one_rank_slab_vertices(
         upper: Inclusive upper share bound for the selected rank.
         clip: Explicitly clip the interval to the rank-feasible range. Without
             this flag, an interval extending outside that range is rejected.
-        atol: Numerical tolerance for feasibility and duplicate elimination.
+        atol: Numerical tolerance for validating computed compositions.
 
     Returns:
         A two-dimensional array containing every distinct slab-polytope vertex.
@@ -90,40 +96,33 @@ def one_rank_slab_vertices(
 
     for vertex in simplex_vertices:
         value = vertex[coordinate]
-        if lower - atol <= value <= upper + atol:
+        if lower <= value <= upper:
             candidates.append(vertex)
 
-    boundaries = (
-        (lower,)
-        if np.isclose(lower, upper, rtol=0.0, atol=atol)
-        else (
-            lower,
-            upper,
-        )
-    )
+    boundaries = (lower,) if lower == upper else (lower, upper)
     for left_index, right_index in combinations(range(ingredient_count), 2):
         left = simplex_vertices[left_index]
         right = simplex_vertices[right_index]
         left_value = left[coordinate]
         right_value = right[coordinate]
         difference = right_value - left_value
-        if abs(difference) <= atol:
+        if difference == 0.0:
             continue
 
         for boundary in boundaries:
-            interpolation = (boundary - left_value) / difference
-            if -atol <= interpolation <= 1.0 + atol:
-                interpolation = min(1.0, max(0.0, interpolation))
+            if min(left_value, right_value) < boundary < max(left_value, right_value):
+                interpolation = (boundary - left_value) / difference
                 candidates.append(left + interpolation * (right - left))
 
-    vertices = deduplicate_vertices(candidates, atol=atol)
-    valid = [
-        vertex
-        for vertex in vertices
-        if is_ordered_simplex_point(vertex, atol=atol)
-        and lower - atol <= vertex[coordinate] <= upper + atol
-    ]
-    result = deduplicate_vertices(valid, atol=atol)
-    if result.shape[0] == 0:
+    if not candidates:
         raise InfeasibleRankIntervalError("rank interval has no feasible composition")
-    return result
+    # A feasible vertex must never be removed just because it is close to another
+    # vertex. Even small differences can change a strict robust sign.
+    vertices = np.unique(np.vstack(candidates), axis=0)
+    if any(
+        not is_ordered_simplex_point(vertex, atol=atol)
+        or not lower - atol <= vertex[coordinate] <= upper + atol
+        for vertex in vertices
+    ):
+        raise ArithmeticError("rank slab vertex failed numerical feasibility validation")
+    return vertices

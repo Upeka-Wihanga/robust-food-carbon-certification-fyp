@@ -111,12 +111,15 @@ def certify_pair(
         food_b.commodity_codes,
         factor_intervals,
     )
-    decision = classify_bounds(bounds.lower, bounds.upper, tolerance=tolerance)
+    if not isfinite(tolerance) or tolerance < 0.0:
+        raise ValueError("tolerance must be finite and nonnegative")
+    effective_tolerance = max(tolerance, bounds.roundoff_margin)
+    decision = classify_bounds(bounds.lower, bounds.upper, tolerance=effective_tolerance)
     return CertificationResult(
         lower_bound=bounds.lower,
         upper_bound=bounds.upper,
         decision=decision,
-        tolerance=tolerance,
+        tolerance=effective_tolerance,
         vertex_count_a=vertices_a.shape[0],
         vertex_count_b=vertices_b.shape[0],
         union_factor_count=len(union_codes),

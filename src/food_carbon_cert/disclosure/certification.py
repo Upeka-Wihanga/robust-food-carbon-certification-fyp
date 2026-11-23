@@ -115,6 +115,7 @@ def certify_disclosure_pair(
 
     lower_bound = min(result.lower_bound for result in component_results)
     upper_bound = max(result.upper_bound for result in component_results)
+    effective_tolerance = max(result.tolerance for result in component_results)
     result_metadata = {} if metadata is None else dict(metadata)
     result_metadata["disclosure"] = {
         "component_count_a": len(feasible_a.components),
@@ -128,8 +129,8 @@ def certify_disclosure_pair(
     return CertificationResult(
         lower_bound=lower_bound,
         upper_bound=upper_bound,
-        decision=classify_bounds(lower_bound, upper_bound, tolerance=tolerance),
-        tolerance=tolerance,
+        decision=classify_bounds(lower_bound, upper_bound, tolerance=effective_tolerance),
+        tolerance=effective_tolerance,
         vertex_count_a=sum(vertex_counts_a),
         vertex_count_b=sum(vertex_counts_b),
         union_factor_count=len(union_codes),

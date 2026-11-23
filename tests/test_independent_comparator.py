@@ -55,7 +55,7 @@ def test_vertex_oracle_matches_independent_lp_factor_corner_comparator() -> None
         codes_b = tuple(codes_b_list)
 
         factor_intervals: dict[str, FactorInterval] = {}
-        for code in set(codes_a) | set(codes_b):
+        for code in sorted(set(codes_a) | set(codes_b)):
             lower = float(rng.uniform(0.01, 4.0))
             factor_intervals[code] = FactorInterval(
                 lower, lower + float(rng.uniform(0.01, 4.0))
@@ -74,8 +74,8 @@ def test_vertex_oracle_matches_independent_lp_factor_corner_comparator() -> None
         maximum_lower_error = max(maximum_lower_error, lower_error)
         maximum_upper_error = max(maximum_upper_error, upper_error)
         classification_mismatches += production.decision is not independent_decision
-        assert np.isclose(production.lower_bound, independent.lower, atol=1e-8)
-        assert np.isclose(production.upper_bound, independent.upper, atol=1e-8)
+        assert np.isclose(production.lower_bound, independent.lower, rtol=0.0, atol=1e-8)
+        assert np.isclose(production.upper_bound, independent.upper, rtol=0.0, atol=1e-8)
         assert production.decision is independent_decision
 
     print(
