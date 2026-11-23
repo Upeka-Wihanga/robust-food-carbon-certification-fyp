@@ -1,0 +1,125 @@
+{
+  "configuration": {
+    "baseline_champion_order": [
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "bootstrap": {
+      "interval": "percentile_2.5_97.5",
+      "method": "paired_stratified_endpoint_node",
+      "replicates": 5000,
+      "seed": 26500
+    },
+    "budget": 2,
+    "cuisine_count": 8,
+    "dataset": "Guan61",
+    "expectation_midpoint_quantile_nodes": 9,
+    "factor_cost": 1,
+    "factor_world_count": 100,
+    "factor_world_seeds": [
+      26000,
+      26099
+    ],
+    "loco_fold_count": 8,
+    "numerical_tolerances": {
+      "parity_bounds_absolute": 1e-12,
+      "policy_score_absolute": 1e-12,
+      "robust_sign_absolute": 1e-12
+    },
+    "pair_count": 222,
+    "policies": [
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "P",
+      "H"
+    ],
+    "recipe_count": 61,
+    "regimes": [
+      "ORDER_ONLY",
+      "PLUS_MINUS_5PP",
+      "PLUS_MINUS_2PP",
+      "PLUS_MINUS_1PP"
+    ],
+    "scenario": "M2",
+    "share_cost": 1
+  },
+  "environment": {
+    "packages": {
+      "black": "26.10.1",
+      "mypy": "2.4.1",
+      "numpy": "2.4.6",
+      "openpyxl": "3.1.5",
+      "pandas": "3.1.1",
+      "pytest": "9.2.0",
+      "pytest-cov": "7.1.0",
+      "ruff": "0.17.6",
+      "scipy": "1.17.1"
+    },
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.11.9",
+    "python_implementation": "CPython"
+  },
+  "git": {
+    "branch": "dev/fyp-implementation",
+    "commit_sha": "4c55dade9f9ef1b3101c6ad235c15699d229022e",
+    "dirty": true,
+    "status_porcelain": [
+      "M src/food_carbon_cert/certification/robust_bounds.py",
+      "?? tests/unit/test_robust_bounds_vectorized.py"
+    ]
+  },
+  "identity_hashes": {
+    "cohort_sha256": "217cb64c526354dee61d143db29abf7737f916425190c0eb9b9c20f4dede3076",
+    "pair_manifest_sha256": "ead9049592db90a60f9ed0628c2ff1f9de1d9516191b2723300e0481a232e4c1"
+  },
+  "implementation": {
+    "file_sha256": {
+      "src/food_carbon_cert/certification/oracle.py": "5ce1ddbe8c776ccbb139d8d1f0610ce9d6e24e86824118c3c9103950e2d7fc99",
+      "src/food_carbon_cert/certification/robust_bounds.py": "76b6156bdc128a5237ab2daec3a21a5b29b82f569787cf094f068b21eca3553b",
+      "src/food_carbon_cert/stage26/cohort.py": "fdf902f22e6bbb2907f5450670dc28d33a68918d7720a80b91a4093e04636802",
+      "src/food_carbon_cert/stage26/policies.py": "b030072412b602204e46ee86a0b30da23fdced3f20b5ffd387db341f947a4e5e",
+      "src/food_carbon_cert/stage26/policy_evaluation.py": "86b01b0951c1f69b7b0c2ca7f049de2aefbd5206cf83bf1639437507723014e4",
+      "src/food_carbon_cert/stage26/preflight.py": "2190228bf1093fb8ec35db6c10e1973c503b01608b712868ad1112d12547f818",
+      "src/food_carbon_cert/stage26/state.py": "12f0b28379983b54a123c8c0a4794617e31eec49a49f05285bd67d43eab25ef1",
+      "workbench/experiments/stage26/final_run/bootstrap_and_finalize.py": "8c340bca43cb1a954fce2dfbc7b523a791d80a22866e27331a170eb9faa369a3",
+      "workbench/experiments/stage26/final_run/run_frozen_evaluation.py": "5e6dcea983be4e6aa40153a2e77c1e2ce0016eb25ef1edd2d8f60662f436b60e",
+      "workbench/experiments/stage26/final_run/verify_reproducibility.py": "fea53b55799273d50a635b5e8c109229b7be85106888aa8c933c7550b2dd5a19"
+    },
+    "policy_api_version": "stage26.2-frozen"
+  },
+  "manifest_status": "FROZEN_BEFORE_FIRST_HELDOUT_EVALUATION",
+  "prior_aborted_manifest": {
+    "reason": "Evaluation aborted before champions or held-out outputs because the scalar vertex-pair loop was operationally infeasible. It was replaced by parity-tested vectorized evaluation.",
+    "sha256": "402c51d2eaf9b29d5dcda50ac376dd17f8d2c7bbbaffef2dece649b4f618756d"
+  },
+  "source": {
+    "expected_guan_sha256": "22b55adad2b463fcff60f486560c66468923323609371ddaa5b3d42ddd34b80b",
+    "guan_filename": "Carbon footprint and nutrition estimation of Chinese cuisines.xlsx",
+    "guan_sha256": "22b55adad2b463fcff60f486560c66468923323609371ddaa5b3d42ddd34b80b"
+  },
+  "verified_counts": {
+    "cuisines": {
+      "Chuan Cuisine": 6,
+      "Hui Cuisine": 12,
+      "Lu Cuisine": 8,
+      "Min Cuisine": 5,
+      "Su Cuisine": 6,
+      "Xiang Cuisine": 8,
+      "Yue Cuisine": 10,
+      "Zhe Cuisine": 6
+    },
+    "eligible_recipes": 61,
+    "m2_factor_keys": 210,
+    "m2_p25": "1.14500",
+    "m2_p75": "4.76300",
+    "parseable_recipes": 308,
+    "source_rows": 320,
+    "within_cuisine_pairs": 222
+  }
+}

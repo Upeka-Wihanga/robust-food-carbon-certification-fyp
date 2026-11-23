@@ -11,4 +11,5 @@ research_archive/** -text
 
 # These fixtures are verified from their exact on-disk bytes.
 tests/fixtures/data/*.csv -text
+scripts/stage26/frozen_run_manifest.json -text
 
