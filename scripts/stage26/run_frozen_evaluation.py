@@ -573,11 +573,22 @@ def main() -> None:
             "repeated_action", "post_certificate_action",
         )
         safety = {field: sum(int(row[field]) for row in first) for field in safety_fields}
-        if len(first) != expected or first != replay or any(safety.values()):
+        actions = sum(int(row["stopping_step"]) for row in first)
+        first_actions = Counter(
+            row["first_action_kind"] for row in first if row["first_action_kind"]
+        )
+        if (
+            len(first) != expected
+            or first != replay
+            or any(safety.values())
+            or set(first_actions) != {"SHARE", "FACTOR"}
+        ):
             raise AssertionError("Stage 26 smoke failed")
         print(json.dumps({
             "mode": "smoke", "pair": pair.pair_id, "world_seed": seed,
-            "trajectories": expected, "deterministic_replay": True, "safety": safety,
+            "trajectories": expected, "acquisitions": actions,
+            "first_action_kinds": dict(first_actions),
+            "deterministic_replay": True, "safety": safety,
         }, indent=2))
         return
 
