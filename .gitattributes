@@ -9,3 +9,6 @@
 # follow the general file-type rules because the last matching attribute wins.
 research_archive/** -text
 
+# These fixtures are verified from their exact on-disk bytes.
+tests/fixtures/data/*.csv -text
+

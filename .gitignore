@@ -41,3 +41,16 @@ Thumbs.db
 *.swp
 *.tmp
 
+# Local source packets, migration snapshots, and Windows experiment runs.
+.cache/
+/evidence/
+/historical_preflight/evidence/
+/historical_preflight/results/
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+

@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from decimal import Decimal
+from functools import reduce
+from operator import add
 
 from food_carbon_cert.stage26 import (
     is_major_source_ingredient,
@@ -33,9 +35,11 @@ def test_decimal_accumulation_preserves_exact_boundary() -> None:
 def test_sanhe_style_fixture_documents_binary_float_failure() -> None:
     weights = (15.0, 26.2, 95.9, 99.8, 63.1)
 
-    # The former float path makes an exact 15/300 boundary sub-threshold.
-    assert sum(weights) == 300.00000000000006
-    assert weights[0] / sum(weights) < 0.05
+    # Reproduce the old left-to-right float sum on Python versions whose sum()
+    # uses compensated addition.
+    legacy_total = reduce(add, weights, 0.0)
+    assert legacy_total == 300.00000000000006
+    assert weights[0] / legacy_total < 0.05
 
     decimal_weights = tuple(Decimal(str(value)) for value in weights)
     decimal_total = sum(decimal_weights, Decimal("0"))
